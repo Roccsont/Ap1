@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <title>Adrienn Krausz-Tóth Photography - GYIK</title>
+  <link rel="icon" type="image/x-icon" href="kepek/Faviconlogo.ico">
+  <link rel="stylesheet" type="text/css" href="css/kapcsolat.css" />
+  <script src="app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="description" content="Adrienn Krausz-Tóth profi fotós. Kapcsolat">
+  <meta name="keywords" content="Kapcsolat, Adrienn Krausz-Tóth">
+  <meta name="author" content="David Laszlo Toth">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <nav id="menu">
+    <ul id="menu-list">
+      <li><a href="index.html" class="menu-link">Kezdőlap</a></li>
+      <li><a href="#fotozas" class="menu-link">Fotózás</a></li>
+      <li><a href="#muterem" class="menu-link">Műterem</a></li>
+      <li><a href="rolam.html" class="menu-link">Magamról</a></li>
+      <li><a href="kapcsolat.html" class="menu-link">Kapcsolat</a></li>
+      <li><a href="gyik.html" class="menu-link">GYIK</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="contact-form">
+      <h2>Kérj ajánlatot az alábbi kapcsolat űrlap kitöltésével!</h2>
+    
+      <form action="/path-to-your-script" method="post">
+        <label for="lastname">Vezetéknév:</label>
+        <input type="text" id="lastname" name="lastname" required>
+    
+        <label for="firstname">Keresztnév:</label>
+        <input type="text" id="firstname" name="firstname" required>
+    
+        <label for="email">Email címed:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="email-confirm">Email címed megerősítése:</label>
+        <input type="email" id="email-confirm" name="email-confirm" required>
+    
+        <label for="interest">Milyen fotózás érdekelne?</label>
+        <select id="interest" name="interest">
+          <option value="kismama">Kismamafotózás</option>
+          <option value="csaladi">Családi fotózás</option>
+          <option value="gyermek">Gyermekfotózás</option>
+          <option value="portre">Portréfotózás</option>
+          <option value="jegyes">Jegyes fotózás/Párfotózás</option>
+          <option value="egyeb">Egyéb (üzenetbe írd bele)</option>
+        </select>
+    
+        <label for="message">Üzenet:</label>
+        <textarea id="message" name="message"></textarea>
+    
+        <div class="submit-container">
+            <input type="submit" value="Ajánlat kérése">
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright © 2023 Adrienn Krausz-Tóth Photography</p>
+  </footer>
+</body>
+</html>

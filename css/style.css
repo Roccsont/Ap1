@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  background-color: rgb(255, 255, 255);
+  font: 20px/27px 'Roboto', sans-serif;
+  color: #333;
+}
+
+#menu {
+  height: 90px;
+  width: 100%;
+  background-color: rgba(250, 250, 250, 0.9);
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  display: flex; /* Flexbox a konténerben, rugalmas elrendezést  */
+  align-items: center; /* konténeren belüli elemeket függőlegesen középre */
+  justify-content: center;/* flex konténeren vízszintesen középre helyezi. */
+}
+
+#menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* flex konténeren belüli elemek  több sorban jelenjenek ha nincs elég hely egy sorban. */
+}
+
+#menu-list li {
+  margin: 10px;
+}
+
+.menu-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 5px 10px;
+  transition: all 0.3s ease; /* tulajdonságok változása (pl. szín, méret stb.) 0.3 másodperc alatt  */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1); /* elem méretét 10%-kal a normál méretéhez képest. növeltem */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font: 700;
+  text-align: center;
+  margin-top: 0;
+}
+
+#mainPhoto {
+  height: 100vh;
+  width: 100%;
+  background-image: url('../kepek/mainPhoto3.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative; /* eltoltam az elemet a normál helyzetéhez képest*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#header-text {
+  color: white;
+  font-style: normal;
+  font-family: 'Roboto', sans-serif;
+  font-size: calc(18px + 2vmin);
+  line-height: 1.3em;
+  letter-spacing: 3px; /* így jobban olvasható mert a betűköz távolságát 3 pixelre növeltem */
+  font-variant: small-caps;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  border-radius: 10px; /* elem sarkait lekerekítetem */
+}
+
+#mainText {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 20px auto;
+  margin-bottom: 80px;
+  max-width: 90%;
+  min-width: 300px;
+  line-height: 1.5;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%); /* Az elemet eltoltam  vízszintesen a saját szélességének -50%-ával. */
+}
+
+#mainText p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+/*azt jelenti, hogy a kódot csak akkor alkalmazza,
+ ha a képernyő szélessége 600 pixel vagy annál kisebb.*/
+@media screen and (max-width: 600px) {
+  #menu ul li {
+    margin: 10px 0;
+  }
+}
+
+.textBlock {
+  flex: 1 1 35%; /* A flex elem növekedési és összehúzódási tényezőjét állítottam be, valamint a kezdeti méretét. Ez elem szabadon növekszik és összehúzódik, és a kezdeti mérete a konténer 35%-a. */
+  padding: 20px;
+  text-align: center; 
+}
+
+.textBlockSecond {
+  margin-top: 120px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.image {
+  flex: 1 1 150%;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.expectingImage, .familyPhotographyImage, .weddingPhotographyImage, .aboutMeImage {
+  flex: 1 1 80%;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.responsive-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;/* A tartalom kitöltse az elem teljes méretét, anélkül, hogy torzítaná a képarányát. */
+}
+
+.custom-divider {
+  display: block;
+  margin: 20px auto;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 75%;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    position:relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 80%;
+    max-width: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;/* A flex konténeren belüli elemeket függőleges sorban rendezi el. */
+  }
+}
+
+.text, .textFourth {
+  width: 50%;
+  padding-right: 5%;
+  text-align: left;
+}
+
+.custom-divider-full {
+  display: block;
+  margin: 20px auto;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  position: relative; 
+  top: 70px;
+}
+
+.textBlockFirst {
+  margin-top: 280px;
+}
+
+.textBlockThird {
+  margin-top: 150px;
+}
+
+.textBlockFourth {
+  margin-top: 150px;
+}
+
+.textBlockFifth {
+  margin-top: 150px;
+  /* További tulajdonságok a szöveg blokkhoz */
+}
+
+.textFirst {  
+  width: 50%;
+  padding-right: 5%;
+  text-align: left;
+}
+
+.childrenPhotographyImage {
+  flex: 1 1 80%;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 600px) {
+  .textFirst, .text {
+    width: 110%;
+    padding-right: 0;
+  }
+}
+
+.icon-button {
+  height: 80px;
+  width: 100%;
+  background-color: rgba(250, 250, 250, 0.9);
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.icon-button a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 5px 10px;
+  margin: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-button a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  background-color: rgba(51, 51, 51, 0.8);
+  color: #fff;
+  padding: 5px 0;
+  margin-top: 50px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between; /* A flex konténeren belüli elemek között egyenletes térközt */
+  align-items: center;
+}
+
+.footer-section {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-heading {
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.footer-text {
+  font-size: 0.8em;
+  line-height: 1.3;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer-links-list li {
+  margin: 0 5px;
+}
+
+.footer-links-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.footer-links-list li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 5px;
+  border-top: 1px solid #fff;
+}
+
+.footer-bottom-text {
+  font-size: 0.8em;/* Az relatív mértékegység, amely a szülő elem betűméretéhez viszonyít. Ez a kód az elem betűméretét a szülő elem betűméretének 80%-ára állítja. */
+}
+
+@media (min-width: 600px) {
+  .footer-content {
+    flex-direction: row;/* elemeket vízszintes sorban  */
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;/* elemeket függőleges sorban */
+  }
+}
